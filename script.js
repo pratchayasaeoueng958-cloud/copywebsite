@@ -85,5 +85,9 @@ function searchCard() {
     );
 
     renderCards(result);
-
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert("คัดลอกแล้ว!");
+    });
+}
 }

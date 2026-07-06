@@ -14,17 +14,30 @@
 
 <body>
 
-<div class="container">
+<div class="layout">
 
-<h1>📋 ชุดเลข</h1>
+    <!-- LEFT: COPY -->
+    <div class="sidebar">
+        <h2>📋 ชุดก็อปข้อความ</h2>
 
-<input
-type="text"
-id="search"
-placeholder="🔍 ค้นหาหัวข้อ..."
-onkeyup="searchCard()">
+        <button onclick="copyText('สวัสดีค่ะ')">ทักลูกค้า</button>
+        <button onclick="copyText('เลขบัญชี xxx')">แจ้งโอน</button>
+        <button onclick="copyText('จัดส่งแล้ว')">แจ้งส่งของ</button>
+    </div>
 
-<div id="cards" class="cards"></div>
+    <!-- MAIN: CHECK NUMBER -->
+    <div class="main">
+        <h1>🔎 ตรวจเลขซ้ำ</h1>
+
+        <textarea id="numberInput" placeholder="ใส่เลข..."></textarea>
+
+        <div class="btn-group">
+            <button onclick="checkNumbers()">ตรวจสอบ</button>
+            <button onclick="clearNumbers()">ล้าง</button>
+        </div>
+
+        <div id="result">ผลลัพธ์จะแสดงตรงนี้...</div>
+    </div>
 
 </div>
 
