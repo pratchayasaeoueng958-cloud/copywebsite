@@ -16,15 +16,69 @@
 
 <div class="container">
 
-<h1>📋 ชุดเลข</h1>
+<h1>🎯 Lucky Number</h1>
 
-<input
-type="text"
-id="search"
-placeholder="🔍 ค้นหาหัวข้อ..."
-onkeyup="searchCard()">
+<div class="left-panel">
 
-<div id="cards" class="cards"></div>
+    <h2>🔍 ตรวจเลข</h2>
+
+    <p>วางเลข 2 หรือ 3 หลัก เพื่อตรวจเลขซ้ำและเลขกลับ</p>
+
+    <textarea
+        id="numberInput"
+        rows="12"
+        placeholder="วางเลขตรงนี้...
+เช่น
+
+11
+22
+33
+11
+12
+21"></textarea>
+
+    <div class="check-buttons">
+
+        <button
+class="check-btn"
+onclick="checkNumbers()">
+
+🔍 ตรวจเลข
+
+</button>
+
+        <button
+class="clear-btn"
+onclick="clearAll()">
+
+🗑 ล้างข้อมูล
+
+</button>
+
+    </div>
+
+    <div id="result">
+
+        ผลการตรวจจะแสดงตรงนี้
+
+    </div>
+
+</div>
+
+    <!-- ฝั่งขวา -->
+    <div class="right-panel">
+
+        <input
+        type="text"
+        id="search"
+        placeholder="🔍 ค้นหาหัวข้อ..."
+        onkeyup="searchCard()">
+
+        <div id="cards" class="cards"></div>
+
+    </div>
+
+</div>
 
 </div>
 

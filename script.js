@@ -87,3 +87,67 @@ function searchCard() {
     renderCards(result);
 
 }
+// ======================
+// ตรวจเลข
+// ======================
+
+function checkNumbers() {
+
+    let rawInput = document.getElementById("numberInput").value;
+
+    // เปลี่ยนตัวคั่นให้เป็นช่องว่าง
+    let normalizedInput = rawInput.replace(/[,\.\/\-\n]/g," ");
+
+    // แยกข้อมูล
+    let tokens = normalizedInput.split(/\s+/);
+
+    // เหลือเฉพาะเลข 2-3 หลัก
+    let nums = tokens.filter(token => /^\d{2,3}$/.test(token));
+
+    let countMap = new Map();
+
+    nums.forEach(num=>{
+        countMap.set(num,(countMap.get(num)||0)+1);
+    });
+
+    let duplicateHTML="";
+
+    let duplicateCount=0;
+
+    countMap.forEach((count,num)=>{
+
+        if(count>1){
+
+            duplicateCount++;
+
+            duplicateHTML+=`🔴 ${num} → ${count} ครั้ง<br>`;
+
+        }
+
+    });
+
+    document.getElementById("result").innerHTML=`
+
+    <b>📊 สรุปผล</b><br><br>
+
+    จำนวนเลขทั้งหมด : ${nums.length}<br>
+
+    จำนวนเลขไม่ซ้ำ : ${countMap.size}<br>
+
+    จำนวนเลขที่ซ้ำ : ${duplicateCount}<br><br>
+
+    <hr>
+
+    ${duplicateHTML || "✅ ไม่พบเลขซ้ำ"}
+
+    `;
+
+}
+
+function clearAll(){
+
+    document.getElementById("numberInput").value="";
+
+    document.getElementById("result").innerHTML="ผลการตรวจจะแสดงตรงนี้";
+
+}

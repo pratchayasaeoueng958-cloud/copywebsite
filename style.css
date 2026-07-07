@@ -141,3 +141,148 @@ h1{
 }
 
 }
+/* ===========================
+   Layout 70% : 30%
+=========================== */
+
+.main-container{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    margin-top:20px;
+}
+
+.left-panel{
+    width:70%;
+}
+
+.right-panel{
+    width:30%;
+}
+
+/* มือถือ */
+
+@media(max-width:900px){
+
+.main-container{
+    flex-direction:column;
+}
+
+.left-panel,
+.right-panel{
+    width:100%;
+}
+
+}
+.left-panel{
+
+width:70%;
+
+background:#ffffff;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+min-height:700px;
+
+}
+
+.right-panel{
+
+width:30%;
+
+}
+/* =======================
+   กล่องตรวจเลข
+======================= */
+
+.left-panel textarea{
+
+width:100%;
+
+padding:15px;
+
+font-size:18px;
+
+font-family:monospace;
+
+border-radius:10px;
+
+border:2px solid #ddd;
+
+resize:vertical;
+
+box-sizing:border-box;
+
+margin-top:10px;
+
+}
+
+.check-buttons{
+
+display:flex;
+
+gap:10px;
+
+margin-top:15px;
+
+}
+
+.check-btn{
+
+flex:1;
+
+background:#2d8cff;
+
+color:white;
+
+border:none;
+
+padding:14px;
+
+border-radius:10px;
+
+font-size:17px;
+
+cursor:pointer;
+
+}
+
+.clear-btn{
+
+flex:1;
+
+background:#777;
+
+color:white;
+
+border:none;
+
+padding:14px;
+
+border-radius:10px;
+
+font-size:17px;
+
+cursor:pointer;
+
+}
+
+#result{
+
+margin-top:20px;
+
+padding:20px;
+
+border-radius:10px;
+
+background:#f7f7f7;
+
+min-height:180px;
+
+line-height:1.8;
+
+}
