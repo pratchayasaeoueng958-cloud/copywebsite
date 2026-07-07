@@ -18,13 +18,16 @@
 
 <h1>🎯 Lucky Number</h1>
 
-<div class="left-panel">
+<div class="main-container">
 
-    <h2>🔍 ตรวจเลข</h2>
+    <!-- ฝั่งซ้าย -->
+    <div class="left-panel">
 
-    <p>วางเลข 2 หรือ 3 หลัก เพื่อตรวจเลขซ้ำและเลขกลับ</p>
+        <h2>🔍 ตรวจเลข</h2>
 
-    <textarea
+        <p>วางเลข 2 หรือ 3 หลัก เพื่อตรวจเลขซ้ำและเลขกลับ</p>
+
+        <textarea
         id="numberInput"
         rows="12"
         placeholder="วางเลขตรงนี้...
@@ -37,33 +40,27 @@
 12
 21"></textarea>
 
-    <div class="check-buttons">
+        <div class="check-buttons">
 
-        <button
-class="check-btn"
-onclick="checkNumbers()">
+            <button
+            class="check-btn"
+            onclick="checkNumbers()">
+            🔍 ตรวจเลข
+            </button>
 
-🔍 ตรวจเลข
+            <button
+            class="clear-btn"
+            onclick="clearAll()">
+            🗑 ล้างข้อมูล
+            </button>
 
-</button>
+        </div>
 
-        <button
-class="clear-btn"
-onclick="clearAll()">
-
-🗑 ล้างข้อมูล
-
-</button>
-
-    </div>
-
-    <div id="result">
-
-        ผลการตรวจจะแสดงตรงนี้
+        <div id="result">
+            ผลการตรวจจะแสดงตรงนี้
+        </div>
 
     </div>
-
-</div>
 
     <!-- ฝั่งขวา -->
     <div class="right-panel">
