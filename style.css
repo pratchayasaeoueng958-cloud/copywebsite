@@ -355,11 +355,9 @@ textarea:focus{
 ========================= */
 
 .buttons{
-
     display:flex;
-
     gap:10px;
-
+    width:100%;
 }
 
 button{
@@ -523,15 +521,16 @@ header h1{
 }
 
 
-.buttons button{
+.buttons button,
+.buttons input{
 
     flex:1;
 
-    border:none;
+    border:none !important;
 
-    border-radius:10px;
+    border-radius:10px !important;
 
-    padding:12px 15px;
+    padding:12px 15px !important;
 
     cursor:pointer;
 
@@ -540,6 +539,8 @@ header h1{
     font-weight:bold;
 
     transition:.25s;
+
+    color:white;
 
 }
 
@@ -576,5 +577,65 @@ header h1{
     background:#15803d;
 
     transform:translateY(-2px);
+
+}
+.show-btn,
+.copy-btn{
+
+    border-radius:10px !important;
+
+    overflow:hidden;
+
+}
+/* FIX RIGHT BUTTON */
+
+.buttons button,
+.buttons input{
+
+    flex:1;
+
+    border:none !important;
+
+    border-radius:10px !important;
+
+    padding:12px 15px !important;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:white;
+
+    transition:.25s;
+
+}
+
+
+.show-btn{
+
+    background:#2563eb !important;
+
+}
+
+
+.copy-btn{
+
+    background:#16a34a !important;
+
+}
+
+
+.show-btn:hover{
+
+    background:#1d4ed8 !important;
+
+}
+
+
+.copy-btn:hover{
+
+    background:#15803d !important;
 
 }
