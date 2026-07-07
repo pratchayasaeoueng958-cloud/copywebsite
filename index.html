@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lucky Number</title>
 
-<link rel="icon" type="image/png" href="logo2.png?v=2">
+<link rel="icon" href="logo2.png?v=3">
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,68 +18,110 @@
 
 <div class="container">
 
-<h1>🎯 Lucky Number</h1>
+    <!-- Header -->
 
-<div class="main-container">
+    <header>
 
-    <!-- ฝั่งซ้าย -->
-    <div class="left-panel">
+        <h1>🎯 Lucky Number</h1>
 
-        <h2>🔍 ตรวจเลข</h2>
+    </header>
 
-        <p>วางเลข 2 หรือ 3 หลัก เพื่อตรวจเลขซ้ำและเลขกลับ</p>
 
-        <textarea
-        id="numberInput"
-        rows="12"
-        placeholder="วางเลขตรงนี้...
-เช่น
+    <!-- Main -->
+
+    <div class="main-container">
+
+
+        <!-- =========================
+             LEFT
+        ========================== -->
+
+        <section class="left-panel">
+
+            <div class="checker-box">
+
+                <h2>🔍 เครื่องมือตรวจเลข</h2>
+
+                <p class="subtitle">
+                    รองรับเลข 2 และ 3 หลัก
+                    แยกด้วย เว้นวรรค . , / - หรือ Enter
+                </p>
+
+                <textarea
+                    id="numberInput"
+                    rows="13"
+                    placeholder="ตัวอย่าง
 
 11
 22
 33
 11
 12
-21"></textarea>
+21
+121
+211"></textarea>
 
-        <div class="check-buttons">
+                <div class="check-buttons">
 
-            <button
-            class="check-btn"
-            onclick="checkNumbers()">
-            🔍 ตรวจเลข
-            </button>
+                    <button
+                        class="check-btn"
+                        onclick="checkNumbers()">
 
-            <button
-            class="clear-btn"
-            onclick="clearAll()">
-            🗑 ล้างข้อมูล
-            </button>
+                        🔍 ตรวจเลข
 
-        </div>
+                    </button>
 
-        <div id="result">
-            ผลการตรวจจะแสดงตรงนี้
-        </div>
+                    <button
+                        class="clear-btn"
+                        onclick="clearAll()">
 
-    </div>
+                        🗑 ล้างข้อมูล
 
-    <!-- ฝั่งขวา -->
-    <div class="right-panel">
+                    </button>
 
-        <input
-        type="text"
-        id="search"
-        placeholder="🔍 ค้นหาหัวข้อ..."
-        onkeyup="searchCard()">
+                </div>
 
-        <div id="cards" class="cards"></div>
+                <div id="result">
+
+                    <div class="empty">
+
+                        📋 ผลการตรวจจะแสดงที่นี่
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RIGHT
+        ========================== -->
+
+        <aside class="right-panel">
+
+            <input
+                id="search"
+                type="text"
+                placeholder="🔍 ค้นหาหัวข้อ..."
+                onkeyup="searchCard()">
+
+            <div
+                id="cards"
+                class="cards">
+
+            </div>
+
+        </aside>
+
 
     </div>
 
 </div>
 
-</div>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
