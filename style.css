@@ -512,3 +512,69 @@ header h1{
 }
 
 }
+/* =========================
+   RIGHT PANEL BUTTON FIX
+========================= */
+
+.buttons{
+    display:flex;
+    gap:10px;
+    width:100%;
+}
+
+
+.buttons button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.show-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+.show-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+.copy-btn{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+
+.copy-btn:hover{
+
+    background:#15803d;
+
+    transform:translateY(-2px);
+
+}
